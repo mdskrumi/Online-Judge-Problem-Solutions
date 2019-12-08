@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+import java.math.BigInteger;
+
+public class Main{
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        BigInteger a , b ,c ;
+
+        while(scan.hasNext()){
+
+            a = scan.nextBigInteger();
+
+            b = scan.nextBigInteger();
+
+            c = a.multiply(b);
+
+            System.out.println(c);
+
+        }
+
+             
+    
+    }
+
+
+}

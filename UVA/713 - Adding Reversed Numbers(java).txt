@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+import java.math.BigInteger;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        int t ;
+ 
+       t = scan.nextInt();
+
+        BigInteger a , b ,c ;
+
+        while(t-->0){
+
+            a = scan.nextBigInteger();
+
+            b = scan.nextBigInteger();
+
+            c = rever(a).add(rever(b));
+
+            System.out.println(rever(c));
+
+        }
+
+             
+    }
+
+    
+public static BigInteger rever(BigInteger x){
+
+       BigInteger rim = BigInteger.ZERO;
+
+       BigInteger g = BigInteger.ZERO;
+
+       while(!x.equals(BigInteger.valueOf(0))){
+
+           rim = x.remainder(BigInteger.TEN);
+
+           g = rim.add(g.multiply(BigInteger.TEN)) ;
+
+           x = x.divide(BigInteger.TEN);
+
+       }
+
+       
+       return g;
+
+   }
+
+    
+
+}

@@ -1,0 +1,29 @@
+import java.util.Scanner;
+import java.math.BigInteger;
+public class Main{
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        
+        BigInteger x ,y ;
+        while(scan.hasNext()){
+            x = scan.nextBigInteger();
+            y = scan.nextBigInteger();
+            BigInteger i ,j ,add ;
+            add = BigInteger.ZERO;
+            while(!(x.equals(BigInteger.ZERO))){
+                i = x;
+                j = BigInteger.ONE;
+                while(!(i.equals(BigInteger.ZERO))){
+                    j = j.multiply(y);
+                    i = i.subtract(BigInteger.ONE);
+                }
+                j = j.multiply(x);
+                add = j.add(add);
+                x = x.subtract(BigInteger.ONE);
+            }
+            System.out.println(add);
+        }
+        
+    }    
+}

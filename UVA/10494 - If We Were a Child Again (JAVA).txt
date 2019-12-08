@@ -1,0 +1,30 @@
+import java.util.Scanner;
+import java.math.BigInteger;
+public class Main{
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        
+        BigInteger x ,y ;
+        char sign;
+        while(scan.hasNext()){
+            x = scan.nextBigInteger();
+            sign = scan.next().charAt(0);
+            y = scan.nextBigInteger();
+            
+            switch(sign){
+                case '%':{
+                    System.out.println(x.mod(y));
+                    break;
+                }
+                case '/':{
+                    System.out.println(x.divide(y));
+                    break;
+                }
+            }
+            
+            
+        }
+        
+    }    
+}

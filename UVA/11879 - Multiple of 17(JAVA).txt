@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.math.BigInteger;
+public class Main{
+
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        
+        BigInteger x ,y ;
+        y = new BigInteger("17");
+        while(scan.hasNext()){
+            x = scan.nextBigInteger();
+            if(x.equals(BigInteger.ZERO)){
+                break;
+            }
+            if((x.mod(y).equals(BigInteger.ZERO))){
+                System.out.println("1");
+            }
+            else{
+                System.out.println("0");
+            }
+            
+        }
+        
+    }    
+}
+

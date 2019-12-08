@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        
+        Scanner in = new Scanner(System.in);
+        int n , l , r;
+        
+        n = in.nextInt();
+        l = in.nextInt();
+        r = in.nextInt();
+        l -=1;
+        r -=1;
+        int cubes1[] = new int[n];
+        int cubes2[] = new int[n];
+        
+        for(int i = 0 ; i < n ; i++){
+            cubes1[i] = in.nextInt();
+        }
+        for(int i = 0 ; i < n ; i++){
+            cubes2[i] = in.nextInt();
+        }
+        char t = 'f';
+        for(int i = 0 ; i < n ; i++){
+            if(i>=l && i <=r){
+                continue;
+            }
+            if(cubes1[i]!=cubes2[i]){
+                System.out.println("LIE");
+                t = 't';
+                break;
+            }
+        }
+        if(t=='f'){
+            System.out.println("TRUTH");
+        }
+        
+    }
+    
+}
