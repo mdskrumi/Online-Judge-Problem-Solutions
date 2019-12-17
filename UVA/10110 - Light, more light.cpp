@@ -14,7 +14,6 @@ using namespace std;
 
 int main(){
     BOLT;
-    TAKING;MAKING;
     long long int n;
     while(cin >> n && n!=0 ){
         long long x = sqrt(n);
